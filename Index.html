@@ -263,8 +263,8 @@
                 tax = 10000000 * 0.05 + 20000000 * 0.10 + 30000000 * 0.20 + 40000000 * 0.30 + (taxableIncome - 100000000) * 0.35;
             }
             
-            // Thu nhập sau thuế = Thu nhập trước thuế - Thuế TNCN phải nộp
-            const netIncome = income - tax;
+            // Thu nhập sau thuế = Thu nhập trước thuế - Bảo hiểm bắt buộc - Thuế TNCN phải nộp
+            const netIncome = income - insurance - tax;
             
             // Hiển thị bảo hiểm tự động
             document.getElementById('grossIncome').textContent = formatNumber(income);
